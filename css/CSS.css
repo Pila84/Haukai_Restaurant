@@ -118,11 +118,19 @@ body {
   flex-direction: column;  /* Make sure children are stacked vertically */
   justify-content: center;
   align-items: center;
-  padding-left: 20vh; 
-  padding-right: 20vh; 
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-left: 5%; 
+  padding-right: 5%; 
+  padding-top: 5%;  /* Default values, optimized for mobile */
+  padding-bottom: 5%;
   text-align: center;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {  /*  breakpoint */
+  .description-container {
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+  }
 }
 
 
@@ -193,11 +201,15 @@ body {
 }
 
 .intro {
-  padding-left: 40px;
+  /*padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 60px;*/
   text-align: center;
+  padding-left: 5%; 
+  padding-right: 5%; 
+  padding-bottom: 5%;
 } 
+
 
 
 
@@ -399,4 +411,45 @@ body {
       width: 80%;       /* Taking 80% of the viewport's width. */
       margin: 0 auto;   /* This centers the container itself in the middle of the viewport. */
   }
+}
+
+/*FOOTER STYLING*/
+footer[role="contentinfo"] {
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+}
+
+footer[role="contentinfo"] p {
+  margin: 0;
+}
+
+
+/* Responsive Design: Modified styles for improved mobile navigation of the menu */
+@media (max-width: 768px) {
+  #menu li a {
+      padding: 5px;  /* Increased padding for larger touch targets */
+      font-size: 18px;     /* Increased font size for better readability */
+  }
+
+  #menu {
+      flex-direction: column;  /* Display the menu vertically */
+  }
+
+  #menu li {
+      margin-bottom: 10px;   /* Add some space between menu items */
+      display: flex;         /* Make the entire list item flexible */
+      align-items: center;   /* Align the content vertically centered */
+  }
+
+  #menu li a {
+      flex: 1;  /* Ensure the anchor tag occupies the full width */
+  }
+}
+
+
+#navbar a:focus {
+  outline: 2px solid rgb(143, 226, 155);  /* indicates focus for keyboard users */
 }
