@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset='utf-8'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="css/CSS.css"> <!-- Custom CSS -->
+     <title>Haukai Restaurant</title>
+   </head>
+
+   <body>
+    <!-- Main header with navigation -->
+    <header>
+      <nav id="navbar">
+        <h2><a href="Index.html" id="brand" lang="mi">Haukai</a></h2>
+        <ul id="menu">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Reservations.html">Reservations</a></li>
+            <li><a href="Hours.html">Hours</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <div id="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
+            <div></div>
+            <div></div>           <!-- empty divs are the 3 lines of the burger menu -->
+            <div></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Here is our page's main content-->
+    <main role="main">
+      <h1 class="pageTitle">Book a table</h1>
+      <p class="intro">Complete the following form to book a table with us.</p>
+      <div class="iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfRF_4cWk1-m3y_dzbG6bzZdAuPYB4s4lm6M_n22qGc9XEobA/viewform?embedded=true" title="Online Booking Form for Restaurant Reservations"></iframe>
+      </div>
+    </main>
+    <hr>
+
+
+    <!-- main footer used across all the pages of our website -->
+    <footer role="contentinfo">
+      <p>&copy; Copyright 2023 by Haukai Restaurant.</p>
+    </footer>
+
+
+
+
+    <!-- JavaScript to handle the navbar collapse -->
+    <script>
+      function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+// Handle screen resize
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 768) {
+        menu.style.display = ''; // Reset the display style for larger screens
+    }
+});
+
+
+  </script>
+  </body>
+</html>

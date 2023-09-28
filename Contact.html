@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset='utf-8'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="css/CSS.css"> <!-- Custom CSS -->
+     <title>Haukai Restaurant</title>
+   </head>
+
+   <body>
+    <!-- Main header with navigation -->
+    <header>
+      <nav id="navbar">
+        <h2><a href="Index.html" id="brand" lang="mi">Haukai</a></h2>
+        <ul id="menu">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Reservations.html">Reservations</a></li>
+            <li><a href="Hours.html">Hours</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <div id="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
+            <div></div>
+            <div></div>           <!-- empty divs are the 3 lines of the burger menu -->
+            <div></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Here is our page's main content-->
+    <main role="main">
+      <h1 class="pageTitle">Contact us</h1>
+      <p class="intro">Come and try out our delicious range of food and beverages. Please let our staff know if you have any dietary requirements.</p>
+      
+    <div class="contentWrapper">  
+      
+      <div class="address">
+          <p class="locationLabel">Location:</p>
+          <p>1 Island street, Kerikeri. Bay of Islands.</p>
+      </div>
+  
+      <div class="mapContainer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.0952255145953!2d173.94718860994448!3d-35.22899947262281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1695167866295!5m2!1sen!2snz" title="Map showing the location of our restaurant" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  
+    </div>
+  
+  
+    </main>
+  
+
+    <!-- main footer used across all the pages of our website -->
+    <footer role="contentinfo">
+      <p>&copy; Copyright 2023 by Haukai Restaurant.</p>
+    </footer>
+
+    <!-- JavaScript to handle the navbar collapse -->
+    <script>
+     function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+// Handle screen resize
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 768) {
+        menu.style.display = ''; // Reset the display style for larger screens
+    }
+});
+
+
+  </script>
+  </body>
+</html>

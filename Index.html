@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset='utf-8'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="css/CSS.css"> <!-- Custom CSS -->
+     <title>Haukai Restaurant</title>
+   </head>
+
+   <body>
+    <!-- Main header with navigation -->
+    <header>
+      <nav id="navbar">
+        <h2><a href="#" id="brand" lang="mi">Haukai</a></h2>
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Reservations.html">Reservations</a></li>
+            <li><a href="Hours.html">Hours</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <div id="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
+            <div></div>
+            <div></div>           <!-- empty divs are the 3 lines of the burger menu -->
+            <div></div>
+        </div>
+      </nav>
+    </header>
+  
+    <!-- Hero section with restaurant name and tagline -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="brand-title" lang="mi">Haukai</h2>
+        <p>Bay of Islands' unique <i lang="mi">M&amacr;ori</i> dining experience</p>
+      </div>
+    </section>
+
+<main role="main">
+  <!-- Description of the restaurant -->
+  <div class="description-container"> 
+        <h1><span lang="mi">Haukai</span> means feast</h1>
+        <p>Our Restaurant is a culinary journey like no other. We offer a fusion of <i lang="mi">Pākehā</i> <i lang="mi">kai</i> options, where flavors intertwine to create a symphony of taste. Immerse yourself in the rich culinary heritage of the Bay of Islands as we explore <i lang="mi">Māori</i> and <i lang="mi">Pasifika</i> cooking techniques and ingredients.</p>
+  </div>
+
+  
+      <!-- Navigation buttons to menu, reservations, and hours -->
+    <div class="buttons-container">
+      <div class="row">
+          <div>
+              <h3>Menu</h3>
+              <p>Explore our delicious menu.</p>
+              <a href="Menu.html" class="buttons">View Menu</a>
+          </div>
+          <div>
+              <h3>Reservations</h3>
+              <p>Book a table with us.</p>
+              <a href="Reservations.html" class="buttons">Make a Reservation</a>
+          </div>
+          <div>
+              <h3>Hours</h3>
+              <p>Check our opening hours.</p>
+              <a href="Hours.html" class="buttons">View Hours</a>
+          </div>
+      </div>
+  </div>
+</main>
+  
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <p>&copy; Copyright 2023 by Haukai Restaurant.</p>
+    </footer>
+
+
+
+    <!-- JavaScript to handle the navbar collapse -->
+    <script>
+      function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+// Handle screen resize
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 768) {
+        menu.style.display = ''; // Reset the display style for larger screens
+    }
+});
+
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,402 @@
+* {
+  box-sizing: border-box; /*calculates the width and height of all element including its content, padding, and border.*/
+}
+
+/* GENERAL STYLES applied to the body of the webpage */
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Font used across the website */
+  color: #fff; /* Text color */
+  background-color: rgb(0, 0, 0); /* Background color of the page */
+  margin: 0;
+}
+
+/* ====  NAVBAR STYLES ==== */
+#navbar {
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#navbar a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color:  rgb(143, 226, 155);
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  margin: 0 10px;
+}
+
+/* ==== HAMBURGER MENU STYLES ==== */
+#hamburger {
+  display: none;  /* Initially hidden */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+#hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+#navbar #brand {
+  color: rgb(143, 226, 155);
+  font-size: inherit; /*  ensures the brand uses the font size of its parent */
+  font-weight: inherit; /* Ensures the brand uses the font weight of its parent */
+  margin: 0; /* Removes any default margin that may be applied to h2 elements */
+}
+
+#navbar #brand:hover {
+  color: white;
+}
+
+
+
+/* Responsive Design: Hide normal menu and show hamburger on small screens */
+@media (max-width: 768px) {
+  #menu {
+      display: none;
+  }
+  
+  #hamburger {
+      display: flex;
+  }
+}
+
+/* ==== HERO SECTION Styling ==== */
+.hero {
+  background-image: url('../images/darkocean-food.webp'); /* Image used for the background */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the image both vertically and horizontally */
+  height: 80vh; /* Reduce the height to 80% of viewport height */
+  color: #ffffff; /* Text color for content */
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Use flexbox to layout child elements */
+  justify-content: center; /* Center child content horizontally using flexbox */
+}
+
+/* Styles specifically for the content inside the hero section */
+.hero-content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the text to increase readability against background */
+  padding-top: 25vh; /* Add padding to the top to vertically center content  */
+}
+
+/* Styling for .brand-title (the branding text) inside the hero section */
+.hero-content .brand-title {
+  font-size: 2.8125em; 
+  margin-bottom: 10px;
+  /* Ensure it's displayed as block so it behaves similar to h1 */
+  display: block; 
+  font-weight: bold;
+}
+
+/* Styling for paragraph text inside the hero section */
+.hero-content p {
+  font-size: 1.125em; 
+}
+
+
+/* ==== MAIN CONTENT ==== */
+.description-container {
+  display: flex;
+  flex-direction: column;  /* Make sure children are stacked vertically */
+  justify-content: center;
+  align-items: center;
+  padding-left: 20vh; 
+  padding-right: 20vh; 
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  text-align: center;
+}
+
+
+
+/*STYLING FOR ==== BUTTONS ==== ON THE INDEX PAGE*/
+.buttons-container {
+  background-image: url('../images/sardines.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* center the row horizontally */
+  align-items: center;     /* center the row vertically */
+  padding: 50px 0;
+  height: auto;   /* height will adjust based on the content within.*/
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /*ensures columns can wrap onto the next line if they don't fit side by side*/
+  justify-content: center; /* ensures items are centered within the row */
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  gap: 20px;
+  text-align: center; /* centers the content of the columns */
+}
+
+.row > div {    /*> symbol is a child combinator. Use to target direct children of an element.*/
+  flex: 1;
+  min-width: calc(33.33% - 40px); 
+}
+
+.row h3, .row p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.buttons {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* a bit of space between the text and the button */
+}
+
+.buttons:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .row > div {
+    flex: 1 0 100%; 
+    min-width: 0; 
+    margin: 10px 0; /* a bit of space between the stacked columns */
+  }
+}
+
+
+
+/*STYLING FOR THE ==== TITLES AND INTROS ===== OF EACH PAGE*/
+.pageTitle{
+  text-align: center; /* Center the text horizontally within its container */ 
+  font-size: 2.5rem; 
+  padding-bottom: 15px;
+  color: rgb(166, 206, 182);
+}
+
+.intro {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+} 
+
+
+
+
+
+/* ===== MENU STYLING =====*/
+/* Sets a margin to the bottom of each dish and beverage element for spacing */
+.dish, .beverage {
+  margin-bottom: 20px;
+}
+
+/* Adjusts the font size for descriptions and prices to be 16px */
+.description, .price {
+  font-size: 16px;
+}
+
+/*MENU SECTION STYLING*/
+
+/* Styling for the entire menu section */
+.menu-section {
+  margin-bottom: 30px;         /* Space below each menu section */
+  text-align: left;            /* Text alignment to the left */
+  padding-left: 40px;          /* Padding to the left for content separation */
+  padding-right: 30px; 
+}
+
+/* Styling to the header (h2) of each menu section */
+.menu-section h2 {
+  font-size: 24px;             /* Sets the font size of the header */
+  font-weight: bold;           /* Makes the header bold */
+  border-bottom: 2px solid rgb(141, 199, 164); /* Adds a border below the header */
+  padding-bottom: 10px;        /* Padding below the header (above the border) */
+  margin-bottom: 30px;         /* Space below the border/header */
+  width: 100%;                 /* Ensures the width covers the full container */
+}
+
+/* DISH STYLING */
+
+/* styling for dish names (h3) */
+.dish h3 {
+  font-size: 18px;             
+  font-weight: bold;           
+}
+
+
+/* BEVERAGE STYLING */
+.beverage-columns {
+  display: flex;
+  flex-wrap: wrap; /* Allows the columns to wrap onto the next line on smaller screens */
+  margin-bottom: 20px;
+  gap: 10%; /* Adjust this for spacing between the columns */
+}
+
+.red-wines,
+.white-wines,
+.beer-cider,
+.non-alcoholic {
+  flex: 1;
+  min-width: calc(50% - 1rem); /* 50% (means half of the parent container's width) - 1rem(16px) to leave a gap between columns*/
+}
+
+
+/*  IMAGE STYLING  */
+
+/* Styles for the images in each section */
+.section-image {
+  float: right;                /* Positions the image to the right of the text */
+  max-width: 550px;            /* Maximum width of the image */
+  height: auto;                /* Automatically adjust the height based on the width to maintain aspect ratio */
+  margin-left: 40px;           /* Spacing between the dishes and the image */
+  margin-top: 40px;            /* Move the image downwards */
+  margin-bottom: 20px;         /* Space below the image */
+  margin-right: 60px;          /* Increase the spacing from the right side of the screen */
+}
+
+/* Styles for the section content, ensuring flex layout */
+.section-content {
+  display: flex;               /* Uses flexbox for layout */
+  flex-wrap: wrap;             /* Allows items to wrap to the next line if necessary */
+  align-items: start;          /* Aligns items to the top of the container */
+}
+
+/* Ensures dishes content takes up as much space as possible */
+.dishes {
+  flex: 1;
+}
+
+/* RESPONSIVE STYLES FOR IMAGES */
+
+/* Adjustments for screens 600px and smaller */
+@media (max-width: 600px) {
+  /* Changes the layout of menu sections for mobile devices */
+  .menu-section {
+      display: flex;           /* Uses flexbox for layout */
+      flex-direction: column;  /* Stacks items vertically */
+  }
+
+  /* Adjusts image styling for mobile devices */
+  .section-image {
+      max-width: 100%;         /* Allows the image to take up the full width if necessary */
+      margin-top: 20px;        /* Space above the image */
+      margin-left: 0;          /* No left margin for mobile */
+      float: none;             /* Removes the float property for mobile */
+  }
+}
+
+/* Adjustments for screens 768px and smaller */
+@media (max-width: 768px) {
+  /* Changes the layout of beverage columns for smaller screens */
+  .beverage-columns {
+      flex-direction: column;  /* Stacks beverage columns vertically */
+  }
+
+  /* Adjusts the padding for individual beverages for smaller screens */
+  .beverage-columns > div {
+      padding-right: 0;        /* Removes right padding */
+  }
+}
+
+
+/* ===== STYLING FOR GOOGLE FORM ===== */
+.iframe-container {
+  position: relative;
+  height: 80vh; /* Adjust this value if you want some padding or other content above/below the iframe */
+  max-width: 90%; /* You can adjust this as required if you want some side margins */
+  margin: 0 auto; /* Centers the iframe horizontally */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* ==== CONTACT PAGE STYLING ==== */
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; 
+  margin: 0 auto;
+}
+
+.address {
+  /* styling for address  */
+  margin-bottom: 20px;
+  padding-left: 0; 
+  padding-right: 0;
+  width: 90%; /* Equal to the mapContainer's width */
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+.locationLabel {
+  font-weight: bold;
+  color: rgb(166, 206, 182);
+}
+
+.mapContainer {
+  position: relative;
+  width: 90%; 
+  padding-bottom: 60%; 
+  margin: 20px auto; 
+  overflow: hidden; 
+}
+
+.mapContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ==== STYLING FOR THE CALENDAR SECTION ===== */
+
+.calendar-container {
+  max-width: 100%;    /* maximum width of 100% of the viewport. ensures container and  iframe  won't overflow the viewport. */
+  overflow: hidden;   /* This will hide any overflowing content. */
+ 
+}
+
+
+.calendar-container iframe {
+  width: 90%;         /* 90% of the width of its container. This gives it margin on smaller screens */
+  height: 500px;      /* The height is set to ensure it displays correctly. */
+  display: block;     /* Makes the iframe a block-level element */
+  margin: 0 auto;     /* This will center the iframe within the container. */
+}
+
+/* This media query ensures that on larger screens, the iframe doesn't become overwhelmingly wide. */
+@media (min-width: 800px) {
+  .calendar-container {
+      width: 80%;       /* Taking 80% of the viewport's width. */
+      margin: 0 auto;   /* This centers the container itself in the middle of the viewport. */
+  }
+}

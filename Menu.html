@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset='utf-8'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="css/CSS.css"> <!-- Custom CSS -->
+     <title>Haukai Restaurant</title>
+   </head>
+
+   <body>
+    <!-- Main header with navigation -->
+    <header>
+      <nav id="navbar">
+        <h2><a href="Index.html" id="brand" lang="mi">Haukai</a></h2>
+        <ul id="menu">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Reservations.html">Reservations</a></li>
+            <li><a href="Hours.html">Hours</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <div id="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
+            <div></div>
+            <div></div>           <!-- empty divs are the 3 lines of the burger menu -->
+            <div></div>
+        </div>
+      </nav>
+    </header>
+
+     <!-- Here is our page's main content-->
+<main role="main">
+       <h1 class="pageTitle">Our Menu</h1>
+       <p class="intro">Our menu reflects the land's bounty and the essence of <i>M&amacr;ori</i> culture, offering a harmonious fusion of flavours that tell stories of tradition and innovation. Join us on a gastronomic journey that embraces the very essence of Aotearoa, where every bite is a celebration of the land, the sea, and the vibrant spirit of New Zealand cuisine.</p>
+
+  <!-- Entrees Section -->
+  <section class="menu-section" id="entrees">
+      <h2>Entrees</h2>
+
+     <div class="section-content">
+        <div class="dishes">
+          <div class="dish">
+              <h3>REWENA BREAD</h3>
+              <p class="description">Traditional Māori bread.</p>
+              <p class="price">$10.00</p>
+          </div>
+          
+          <div class="dish">
+              <h3>PAUA FRITTER</h3>
+              <p class="description">Finely diced pieces of paua, served with a side salad and horopito dressing.</p>
+              <p class="price">$16.00</p>
+          </div>
+          
+          <div class="dish">
+              <h3>RAW FISH</h3>
+              <p class="description">Dried snapper fish marinated in coconut cream, served with tomatoes and spring onions.</p>
+              <p class="price">$20.00</p>
+          </div>
+          
+          <div class="dish">
+              <h3>POACHED SALMON</h3>
+              <p class="description">Salmon poached in an orange and pistachio glaze, served with rewena bread.</p>
+              <p class="price">$22.00</p>
+          </div>
+          
+          <div class="dish">
+              <h3>SEAFOOD BASKET</h3>
+              <p class="description">Crumbed mussels, salt and pepper squid, crumbed hoki bites and garlic prawns.</p>
+              <p class="price">$25.00</p>
+          </div>
+
+        </div>    
+      <img src="../images/snack1.webp" alt="Picture of our Seafood basket. License-free image by Freepik" class="section-image">
+    </div>  
+ </section>
+
+<!-- Mains Section -->
+<section class="menu-section" id="mains">
+    <h2>Mains</h2>
+    
+    <div class="section-content">
+        <div class="dishes">
+            <!-- Dishes for the mains section -->
+            <div class="dish">
+                <h3>FISH OF THE DAY</h3>
+                <p class="description">Beer-battered fish and kumara fries, served with a side salad and homemade tartare.</p>
+                <p class="price">$25.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>MUSSELS AND SCALLOPS</h3>
+                <p class="description">Steamed mussel & scallop mousse, honey and soy broth.</p>
+                <p class="price">$25.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>SEAFOOD CHOWDER</h3>
+                <p class="description">Creamy chowder filled with tarakihi, prawn, hoki, scallops and mussels, served with flatbread.</p>
+                <p class="price">$30.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>PORK BELLY</h3>
+                <p class="description">Slow-cooked pork belly served on a bed of apple slaw with roasted kumara and crispy noodles.</p>
+                <p class="price">$30.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>LAMB STEAK</h3>
+                <p class="description">New Zealand lamb coated in a kawakawa crumb, served with Dijon-mustard-glazed carrots, roasted butternut squash and mushroom jus.</p>
+                <p class="price">$33.00</p>
+            </div>
+
+            <div class="dish">
+                <h3>VENISON</h3>
+                <p class="description">Venison crusted with Horopito, served with glazed plums, cabbage salad and red wine jus.</p>
+                <p class="price">$33.00</p>
+            </div>    
+        </div>       
+        <img src="../images/muss.webp" alt="Picture of our steamed mussels. License-free image by Freepik" class="section-image">
+    </div>
+</section>
+
+<!-- Desserts Section -->
+<section class="menu-section" id="desserts">
+    <h2>Desserts</h2>
+    
+    <div class="section-content">
+        <div class="dishes">
+            <!-- Dishes for the desserts section -->
+            <div class="dish">
+                <h3>KAPITI ICE CREAM</h3>
+                <p class="description">Check for daily specials.</p>
+                <p class="price">$10.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>STEAMED PUDDING</h3>
+                <p class="description">Golden-syrup-flavoured steamed pudding, served with vanilla ice cream.</p>
+                <p class="price">$12.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>MINI PAVLOVA</h3>
+                <p class="description">Mini pavlova, served with kawakawa and lemon-infused cream and fresh fruit.</p>
+                <p class="price">$16.00</p>
+            </div>
+            
+            <div class="dish">
+                <h3>BANOFFEE PIE</h3>
+                <p class="description">Toffee, fresh bananas and fresh cream.</p>
+                <p class="price">$16.00</p>
+            </div>
+        </div>
+        <img src="../images/ppavlova.webp" alt="Picture of our mini pavlova. License-free image by Freepik" class="section-image">
+    </div>
+</section>
+
+<!-- Beverages Section -->
+<section class="menu-section" id="beverages">
+    <h2>Beverages</h2>
+    <div class="beverage-columns">
+
+        <!-- Column 1: Red Wines and Beers -->
+        <div class="red-wines-beers">
+            <!-- Red Wines -->
+            <h3>RED</h3>
+            <div class="beverage">
+                <p>Terrace Edge Pinot Noir, 2012, Wairarapa</p>
+                <p class="price">$53/13</p>
+            </div>
+            <div class="beverage">
+                <p>Altitude Pinot Noir, 2010, Marlborough</p>
+                <p class="price">$64/15</p>
+            </div>
+            <div class="beverage">
+                <p>Terrace Edge, Syrah, 2012, Wairarapa</p>
+                <p class="price">$53/13</p>
+            </div>
+            <div class="beverage">
+                <p>Greystone Syrah, 2012, Wairarapa</p>
+                <p class="price">$73/17</p>
+            </div>
+            <div class="beverage">
+                <p>Pegasus Bay Merlot, 2013, Waipara</p>
+                <p class="price">$65/14</p>
+            </div>
+            <br>
+            <!-- Beer and Cider -->
+            <div class="beer-cider">
+                <h3>BEER AND CIDER</h3>
+                <div class="beverage">
+                    <p>Garage project range</p>
+                    <p class="price">$11</p>
+                </div>
+                <div class="beverage">
+                    <p>Tuatara range</p>
+                    <p class="price">$11</p>
+                </div>
+                <div class="beverage">
+                    <p>Panhead range</p>
+                    <p class="price">$10</p>
+                </div>
+                <div class="beverage">
+                    <p>Heineken</p>
+                    <p class="price">$11</p>
+                </div>
+                <div class="beverage">
+                    <p>Moa cider</p>
+                    <p class="price">$10</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Whites and Non-Alcoholic -->
+        <div class="whites-non-alcoholic">
+            <!-- White Wines -->
+            <h3>WHITE</h3>
+            <div class="beverage">
+                <p>Maude Pinot Gris, 2017, Otago</p>
+                <p class="price">$49.50/11</p>
+            </div>
+            <div class="beverage">
+                <p>Charles Wiffen Chardonnay, 2013, Otago</p>
+                <p class="price">$48/11</p>
+            </div>
+            <div class="beverage">
+                <p>Lamont Riesling, 2010, Otago</p>
+                <p class="price">$57/13</p>
+            </div>
+            <div class="beverage">
+                <p>Elephant Hill Viognier, 2013, Hawke's Bay</p>
+                <p class="price">$55/12</p>
+            </div>
+            <div class="beverage">
+                <p>Folium Sauvignon Blanc, 2011, Marlborough</p>
+                <p class="price">$52/11</p>
+            </div>
+            <div class="beverage">
+                <p>Billecart-Salmon Brut Reserve, France</p>
+                <p class="price">$120</p>
+            </div>
+            <br>
+            <!-- Non-Alcoholic -->
+            <div class="non-alcoholic">
+                <h3>NON-ALCOHOLIC</h3>
+                <div class="beverage">
+                    <p>Mineral water</p>
+                    <p class="price">$4.00</p>
+                </div>
+                <div class="beverage">
+                    <p>Soft drinks</p>
+                    <p class="price">$4.00</p>
+                </div>
+                <div class="beverage">
+                    <p>Juice</p>
+                    <p class="price">$4.00</p>
+                </div>
+                <div class="beverage">
+                    <p>Coffee and tea</p>
+                    <p class="price">$4.50</p>
+                </div>
+                
+            </div>
+        </div>
+    </div> <!-- Closing div for .beverage-columns -->
+</section>
+
+</main>
+
+     <!-- main footer used across all the pages of our website -->
+     <footer role="contentinfo">
+       <p>&copy; Copyright 2023 by Haukai Restaurant.</p>
+     </footer>
+
+     <!-- JavaScript to handle the navbar collapse -->
+    <script>
+      function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+// Handle screen resize
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 768) {
+        menu.style.display = ''; // Reset the display style for larger screens
+    }
+});
+
+  </script>
+
+   </body>
+</html>
