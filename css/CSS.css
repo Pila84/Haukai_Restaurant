@@ -376,7 +376,7 @@ body {
   position: relative;
   width: 90%; 
   padding-bottom: 60%; 
-  margin: 20px auto; 
+  margin: 20px auto 40px auto;
   overflow: hidden; 
 }
 
@@ -419,7 +419,6 @@ footer[role="contentinfo"] {
   padding: 20px 0;
   text-align: center;
   font-size: 0.8rem;
-  border-top: 1px solid #444;
 }
 
 footer[role="contentinfo"] p {
