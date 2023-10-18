@@ -479,8 +479,25 @@ footer[role="contentinfo"] p {
 #passwordPrompt {
   text-align: center;
   margin-top: 20px;
-  padding: 0 20px; /* Added padding to give space from the screen edges */
+  padding: 10px 20px; /* Added padding to give space from the screen edges */
 }
+
+/* Style for the login button */
+#passwordPrompt button {
+  display: inline-block;
+  padding: 5px 10px; /* Increased padding for a larger size */
+  background-color: #4CAF50; /* Green color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; /* Larger font size */
+}
+
+/* Add hover effect for the button */
+#passwordPrompt button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
 
 /* Styling for the main container that holds all the staff details */
 .staff-container {
@@ -496,13 +513,13 @@ footer[role="contentinfo"] p {
 .avatar {
   background-color: rgb(191, 233, 197);
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 15px;
   color: #777;
 }
 
@@ -590,4 +607,3 @@ footer[role="contentinfo"] p {
       white-space: nowrap;
   }
 }
-
