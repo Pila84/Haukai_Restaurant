@@ -31,7 +31,7 @@ body {
 }
 
 #menu {
-  display: flex;
+  display: flex;                  /*FLEXBOX for the #menu element inside the #navbar*/
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -71,13 +71,30 @@ body {
 /* Responsive Design: Hide normal menu and show hamburger on small screens */
 @media (max-width: 768px) {
   #menu {
-      display: none;
+      display: none; /* Keep this line */
+      position: absolute;       /* Takes the menu out of the normal flow */
+      right: 10px;              /* Aligned to the right edge */
+      top: 60px;                /* Pushed down to appear below the navbar */
+      flex-direction: column;   /* Display items vertically */
+      background-color: black;  /* Matches the navbar color */
+      min-width: 200px;  /* Set a minimum width */
   }
   
+  #menu li {
+      margin: 0;
+  }
+  
+  #menu a {
+      display: block;           /* Each link will take up the full width */
+      padding: 15px;
+  }
+
   #hamburger {
       display: flex;
   }
 }
+
+
 
 /* ==== HERO SECTION Styling ==== */
 .hero {
@@ -114,7 +131,7 @@ body {
 
 /* ==== MAIN CONTENT ==== */
 .description-container {
-  display: flex;
+  display: flex;                      /*.description-container class using FLEXBOX with a column layout*/
   flex-direction: column;  /* Make sure children are stacked vertically */
   justify-content: center;
   align-items: center;
@@ -257,7 +274,7 @@ body {
 
 /* BEVERAGE STYLING */
 .beverage-columns {
-  display: flex;
+  display: flex;                  /*.beverage-columns using FLEXBOX*/
   flex-wrap: wrap; /* Allows the columns to wrap onto the next line on smaller screens */
   margin-bottom: 20px;
   gap: 10%; /* Adjust this for spacing between the columns */
@@ -452,3 +469,125 @@ footer[role="contentinfo"] p {
 #navbar a:focus {
   outline: 2px solid rgb(143, 226, 155);  /* indicates focus for keyboard users */
 }
+
+
+
+
+/* STAFF PAGE STYLING */
+
+/* Style for the password prompt section at the top */
+#passwordPrompt {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px; /* Added padding to give space from the screen edges */
+}
+
+/* Styling for the main container that holds all the staff details */
+.staff-container {
+  display: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 20px; /* Added padding to give space from the screen edges */
+}
+
+/* Styling for the avatar (initials) of each staff member */
+.avatar {
+  background-color: rgb(191, 233, 197);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #777;
+}
+
+/* General styling for the section that holds the roster table */
+.roster-section {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 20px; /* Added padding to give space from the screen edges */
+}
+
+/* Styling for the roster table */
+.roster-section table {
+  border-collapse: collapse;
+  margin: auto; /* Centers the table */
+}
+
+/* Styling for the header cells and data cells within the roster table */
+.roster-section th, .roster-section td {
+  padding: 10px; /* Increased padding for better spacing */
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* Adjustments for the first column of the table (staff names) */
+.roster-section td:first-child {
+  text-align: left;
+  white-space: nowrap; /* Prevents the content from wrapping to the next line */
+}
+
+/* Adjustments for the day columns within the table */
+.roster-section th:not(:first-child), .roster-section td:not(:first-child) { /*applies styling to all the day columns while excluding the "Staff Member" column*/
+  text-align: center;
+  width: 13%; /* Adjusts each day column to be equal width */
+}
+
+/* Styling adjustments for the avatars within the table */
+.roster-section td .avatar {
+  margin: 0;
+}
+
+/* Styling for the header row of the roster table */
+.roster-section thead {
+  background-color: rgb(191, 233, 197);
+  color:rgb(0, 0, 0)
+}
+
+
+
+
+@media (max-width: 767px) {
+  /* Hide the default table headers on mobile */
+  .roster-section thead {
+      display: none;
+  }
+  
+  /* Make the table rows behave like block elements */
+  .roster-section tbody, .roster-section tr {
+      width: 100%;
+      display: block;
+      position: relative;
+  }
+  
+  /* Each table cell is displayed as a block and takes the full width */
+  .roster-section td {
+      display: block;
+      border: none; /* Remove borders */
+      position: relative;
+      padding-left: 50%; /* Make space for the pseudo-element */
+      text-align: right; /* Text alignment */
+      white-space: normal; /* Allow text to wrap normally */
+      height: auto;
+  }
+  
+  /* Use the `data-th` attribute as content for a pseudo-element 
+     This pseudo-element will act as  mobile "header" for each item */
+  .roster-section td:before {
+      content: attr(data-th);
+      position: absolute;
+      top: 6px; 
+      left: 6px;
+      width: 45%;
+      padding-right: 10px; 
+      font-weight: bold;
+      text-align: left;
+      white-space: nowrap;
+  }
+}
+

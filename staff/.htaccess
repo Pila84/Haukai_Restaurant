@@ -1,0 +1,23 @@
+AuthType Basic                          
+AuthName "Enter Staff Password"
+AuthUserFile "C:\Users\Pila\Desktop\Web Projects\BIT607 Dev Projects\AS2 Haukai Restaurant\staff\.htpasswd"
+Require valid-user
+
+
+
+
+
+
+
+# Specify the authentication method
+# AuthType Basic
+
+# Provide a name for the password-protected area
+# AuthName "Enter Staff Password"
+
+# The path to the .htpasswd file. Note: This path is specific to my local machine. 
+# In a real-world scenario, this would point to a location on the server.
+# AuthUserFile "C:\Users\Pila\Desktop\Web Projects\BIT607 Dev Projects\AS2 Haukai Restaurant\staff\.htpasswd"
+
+# This ensures that only valid users can access the restricted content.
+# Require valid-user

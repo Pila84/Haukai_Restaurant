@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/CSS.css">
+    <title>Staff Page</title>
+</head>
+
+<body>
+    <!-- Main header with navigation -->
+    <header>
+        <nav id="navbar">
+            <h2><a href="../index.html" id="brand" lang="mi">Haukai</a></h2>
+            <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Menu.html">Menu</a></li>
+                <li><a href="../Reservations.html">Reservations</a></li>
+                <li><a href="../Hours.html">Hours</a></li>
+                <li><a href="../Contact.html">Contact</a></li>
+            </ul>
+            <div id="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu" aria-expanded="false">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content for the Staff page -->
+    <main role="main">
+        <!-- This is a simulated staff login for demonstration purposes-->
+        <section id="passwordPrompt">
+            <label for="staffPassword">Enter Staff Password:</label>
+            <input type="password" id="staffPassword">
+            <button onclick="validatePassword()">Login</button>
+        </section>
+
+        <div class="staff-container" style="display: none;">
+            <!-- Roster Table -->
+            <section class="roster-section">
+                <h2>Staff Roster for Next Two Weeks</h2>
+            
+                <!-- Week 1 -->
+                <h3>Week 1</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Staff Member</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">JD</div>
+                                Name: John Doe<br>
+                                Contact Number: 027-904554
+                            </td>
+                            <td data-th="Monday">✓</td>
+                            <td data-th="Tuesday"></td>
+                            <td data-th="Wednesday">✓</td>
+                            <td data-th="Thursday"></td>
+                            <td data-th="Friday">✓</td>
+                            <td data-th="Saturday"></td>
+                            <td data-th="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">AJ</div>
+                                Name: Alice Johnson<br>
+                                Contact Number: 021-7954052
+                            </td>
+                            <td data-th="Monday"></td>
+                            <td data-th="Tuesday">✓</td>
+                            <td data-th="Wednesday"></td>
+                            <td data-th="Thursday">✓</td>
+                            <td data-th="Friday"></td>
+                            <td data-th="Saturday"></td>
+                            <td data-th="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">TS</div>
+                                Name: Tania Smith<br>
+                                Contact Number: 022-0214789
+                            </td>
+                            <td data-th="Monday"></td>
+                            <td data-th="Tuesday">✓</td>
+                            <td data-th="Wednesday"></td>
+                            <td data-th="Thursday">✓</td>
+                            <td data-th="Friday"></td>
+                            <td data-th="Saturday"></td>
+                            <td data-th="Sunday"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <!-- Week 2 -->
+                <h3>Week 2</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Staff Member</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">JD</div>
+                                Name: John Doe<br>
+                                Contact Number: 027-904554
+                            </td>
+                            <td data-th="Monday"></td>
+                            <td data-th="Tuesday">✓</td>
+                            <td data-th="Wednesday"></td>
+                            <td data-th="Thursday"></td>
+                            <td data-th="Friday">✓</td>
+                            <td data-th="Saturday"></td>
+                            <td data-th="Sunday">✓</td>
+                        </tr>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">AJ</div>
+                                Name: Alice Johnson<br>
+                                Contact Number: 021-7954052
+                            </td>
+                            <td data-th="Monday">✓</td>
+                            <td data-th="Tuesday"></td>
+                            <td data-th="Wednesday"></td>
+                            <td data-th="Thursday"></td>
+                            <td data-th="Friday">✓</td>
+                            <td data-th="Saturday">✓</td>
+                            <td data-th="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td data-th="Staff Member">
+                                <div class="avatar">TS</div>
+                                Name: Tania Smith<br>
+                                Contact Number: 022-0214789
+                            </td>
+                            <td data-th="Monday">✓</td>
+                            <td data-th="Tuesday"></td>
+                            <td data-th="Wednesday">✓</td>
+                            <td data-th="Thursday"></td>
+                            <td data-th="Friday"></td>
+                            <td data-th="Saturday"></td>
+                            <td data-th="Sunday">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- main footer used across all the pages of our website -->
+    <footer role="contentinfo">
+        <p>&copy; Copyright 2023 by Haukai Restaurant.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', function() {
+            const menu = document.getElementById('menu');
+            if (window.innerWidth > 768) {
+                menu.style.display = ''; // Reset the display style for larger screens
+            }
+        });
+
+        function validatePassword() {
+            let enteredPassword = document.getElementById('staffPassword').value;
+            const correctPassword = "staff123"; // Placeholder password
+            if (enteredPassword === correctPassword) {
+                document.getElementById('passwordPrompt').style.display = "none";
+                document.querySelector('.staff-container').style.display = "flex";
+            } else {
+                alert('Wrong password! Try again.');
+            }
+        }
+    </script>
+</body>
+
+</html>
